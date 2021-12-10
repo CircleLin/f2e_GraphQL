@@ -2,9 +2,9 @@
   {
     public interface If2eDBSettings
     {
-        string ConnectionString { get; set; }
-        string DatabaseName { get; set; }
-        string f2eCollectionName { get; set; }
+        string? ConnectionString { get; set; }
+        string? DatabaseName { get; set; }
+        string? f2eCollectionName { get; set; }
     }
   }
   

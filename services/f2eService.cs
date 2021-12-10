@@ -1,6 +1,7 @@
 using MongoDB.Driver;
 using f2e_GraphQL.models;
 using System.Collections.Generic;
+using System;
 
 namespace f2e_GraphQL.services
 {
@@ -23,10 +24,14 @@ namespace f2e_GraphQL.services
 
         public f2e GetById(string id)
         {
-            var f2eData = _f2eModel.Find(x=>x._id == id).FirstOrDefault();
-            if(f2eData == null)
+            if(string.IsNullOrWhiteSpace(id))            
             {
-                throw new System.Exception($"查無id為{id}的資料");
+                throw new Exception("請提供id參數");
+            }
+            var f2eData = _f2eModel.Find(x=>x._id == id).FirstOrDefault();
+            if(f2eData is null)
+            {
+                throw new Exception($"查無id為{id}的資料");
             }
             return f2eData;
         }
