@@ -20,5 +20,10 @@ namespace f2e_GraphQL.services
             var data = _f2eModel.Find(f2e => true).ToList();
             return data;
         }
+
+        public f2e GetById(string id)
+        {
+            return _f2eModel.Find(x=>x._id == id).FirstOrDefault();
+        }
     }
 }

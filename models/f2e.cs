@@ -7,7 +7,7 @@ namespace f2e_GraphQL.models
 public class f2e
     {            
         [BsonRepresentation(BsonType.ObjectId)] 
-        public string _id { get; set; }
+        public string? _id { get; set; }
 
         [GraphQLDescription("職稱")]
         public string? job { get; set; }
