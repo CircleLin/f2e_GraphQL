@@ -32,6 +32,8 @@ namespace f2e_GraphQL
                     sp.GetRequiredService<IOptions<f2eDBSettings>>().Value);
 
             services.AddSingleton<f2eService>();
+
+            services.AddErrorFilter<CustomErrorFilter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

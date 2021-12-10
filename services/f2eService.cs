@@ -23,7 +23,12 @@ namespace f2e_GraphQL.services
 
         public f2e GetById(string id)
         {
-            return _f2eModel.Find(x=>x._id == id).FirstOrDefault();
+            var f2eData = _f2eModel.Find(x=>x._id == id).FirstOrDefault();
+            if(f2eData == null)
+            {
+                throw new System.Exception($"查無id為{id}的資料");
+            }
+            return f2eData;
         }
     }
 }
