@@ -35,5 +35,17 @@ namespace f2e_GraphQL.services
             }
             return f2eData;
         }
+
+        public List<f2e> GetByJobTenture(string jobTenture)
+        {
+            List<f2e> f2eData = new List<f2e>();
+             if(string.IsNullOrWhiteSpace(jobTenture))            
+            {
+                throw new Exception("請提供工作年資參數");
+            }
+
+            f2eData = _f2eModel.Find(x=>x.company.job_tenure == jobTenture).ToList();
+            return f2eData;
+        }
     }
 }

@@ -21,5 +21,12 @@ namespace f2e_GraphQL
             var f2e = f2eservice.GetById(id);
             return f2e;
         }
+
+        [GraphQLDescription("依年資取得前端從業人員資料")]
+        public List<f2e> Getf2eByJobTenture([Service] f2eService f2eservice, string job_tenure)
+        {
+            var f2e = f2eservice.GetByJobTenture(job_tenure);
+            return f2e;
+        }
     }
 }
