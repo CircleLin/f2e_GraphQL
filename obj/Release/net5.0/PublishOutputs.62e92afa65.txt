@@ -1,6 +1,11 @@
 C:\Users\user\Desktop\f2e_GraphQL\publish\f2e_GraphQL.exe
+C:\Users\user\Desktop\f2e_GraphQL\publish\publish\web.config
 C:\Users\user\Desktop\f2e_GraphQL\publish\appsettings.Development.json
 C:\Users\user\Desktop\f2e_GraphQL\publish\appsettings.json
+C:\Users\user\Desktop\f2e_GraphQL\publish\publish\appsettings.Development.json
+C:\Users\user\Desktop\f2e_GraphQL\publish\publish\appsettings.json
+C:\Users\user\Desktop\f2e_GraphQL\publish\publish\f2e_GraphQL.deps.json
+C:\Users\user\Desktop\f2e_GraphQL\publish\publish\f2e_GraphQL.runtimeconfig.json
 C:\Users\user\Desktop\f2e_GraphQL\publish\f2e_GraphQL.dll
 C:\Users\user\Desktop\f2e_GraphQL\publish\f2e_GraphQL.deps.json
 C:\Users\user\Desktop\f2e_GraphQL\publish\f2e_GraphQL.runtimeconfig.json

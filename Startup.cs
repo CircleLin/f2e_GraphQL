@@ -28,6 +28,13 @@ namespace f2e_GraphQL
             services.Configure<f2eDBSettings>(
                 Configuration.GetSection(nameof(f2eDBSettings)));
 
+            services.AddCors(options => 
+                    options.AddDefaultPolicy(builder =>
+                    builder.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                ));
+
             services.AddSingleton<If2eDBSettings>(sp =>
                     sp.GetRequiredService<IOptions<f2eDBSettings>>().Value);
 
@@ -43,9 +50,8 @@ namespace f2e_GraphQL
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseRouting();
-
+            app.UseCors();
+            app.UseRouting();            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGraphQL();

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/e3fba8fb-3869-4812-a4c3-22879e920bc6/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/F2E-GraphQL",
+    "appService.deploySubpath": "publish"
+}
